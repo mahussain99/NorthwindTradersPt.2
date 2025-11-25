@@ -8,7 +8,7 @@ public class Northwind {
         try {
             if(args.length !=2){
                 System.out.println( "This application need to correct username and password");
-
+                System.exit(1);
             }
             String username = args[0];
             String password = args[1];
@@ -40,6 +40,7 @@ public class Northwind {
 
                 System.out.println("ProductID: " + ProductID);
                 System.out.println("ProductName: " + ProductName);
+                System.out.println("UnitPrice: " + UnitPrice);
                 System.out.println("UnitsInStock: " + UnitsInStock);
 
 
@@ -49,7 +50,7 @@ public class Northwind {
             connection.close();
 
         } catch (Exception e) {
-            System.out.println("Run time error");
+            System.out.println("Show me run time error");
            e.printStackTrace();
 
         }
