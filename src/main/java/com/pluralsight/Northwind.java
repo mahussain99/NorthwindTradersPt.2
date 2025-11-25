@@ -28,9 +28,12 @@ public class Northwind {
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet results = preparedStatement.executeQuery();
+
+
             while (results.next()){
 
                 int ProductID = results.getInt( "ProductID");
+                System.out.println("---------------------------------");
                 String ProductName = results.getString( "ProductName");
                 double UnitPrice = results.getDouble("UnitPrice");
                 int UnitsInStock = results.getInt("UnitsInStock" );
